@@ -1,16 +1,19 @@
-# This is a sample Python script.
+def temperature_converter():
+    switchOfKelvin = 273.15
+    inp = input('Ready to listen. ').split()
+    if inp[0].lower() == 'k':
+        celsius = float(inp[1]) - switchOfKelvin
+        to_print(inp[1], str(celsius), inp[0], inp[2])
+    else:
+        kelvin = float(inp[1]) + switchOfKelvin
+        to_print(inp[1], str(kelvin), inp[0], inp[2])
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+def to_print(inpTemp, outTemp, inpStr, outStr):
+    return print(inpTemp + "° " + inpStr + " equals " + outTemp + "° " + outStr)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    temperature_converter()
